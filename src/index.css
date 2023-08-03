@@ -5,10 +5,50 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F1F4FC;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro-Light.ttf') format('ttf'),
+       url('./fonts/Intro-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro-Book.ttf') format('ttf'),
+  url('./fonts/Intro-Book.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro-Book-Italic.ttf') format('ttf'),
+       url('./fonts/Intro-Book-Italic.woff') format('woff'),
+       url('./fonts/Intro-Book-Italic.eot') format('eot');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro-Regular.ttf') format('ttf'),
+       url('./fonts/Intro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro-Bold.ttf') format('ttf'),
+       url('./fonts/Intro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }

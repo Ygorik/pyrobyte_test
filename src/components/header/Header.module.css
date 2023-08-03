@@ -1,10 +1,35 @@
+header{
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+	padding: 0 32px;
+	height: 80px;
+	border-bottom: 1px solid rgba(43, 107, 243, 0.16);
+    font-family: 'Intro';
+    white-space: nowrap;
+    background-color: #F8FAFF;
+}
+
 .geolocation{
     display: flex;
+    align-items: center;
     width: fit-content;
+    margin-right: 169px;
+}
+
+.geolocation img{
+    margin-right: 66px;
 }
 
 .geolocation svg{
-    margin-right: 8px;
+    margin-right: 6px;
+    margin: 0 10px 0 4px;
+    min-width: 12px;
+}
+
+.geolocation p{
+    font-size: 16px;
+    color: #666;
 }
 
 .track-search{
@@ -13,6 +38,30 @@
     background-color: #FFF;
     border-radius: 8px;
     border: 1px solid #C2D2F4;
+    padding: 0 16px 0 12px;
+    background-image: url(../../resources/Search.svg);
+    background-repeat:  no-repeat;
+    background-position: right 12px center;
+    font-size: 14px;
+    margin-right: 211px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu a{
+    font-size: 16px;
+    color: #666;
+}
+
+.menu a:first-child{
+    margin-right: 36px;
+}
+
+.menu a:last-child{
+    margin-right: 32px;
 }
 
 .login{

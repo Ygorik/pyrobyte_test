@@ -87,11 +87,65 @@ legend {
 	display: block;
 }
 
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 32px;
-	height: 80px;
-	border-bottom: 1px solid rgba(43, 107, 243, 0.16);
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 24pt;
+	color: #1D253C;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24pt;
+	color: #1D253C;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32pt;
+	color: #1D253C;
+}
+
+h4{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32pt;
+	color: #1D253C;
+}
+
+h5{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24pt;
+	color: #1D253C;
+}
+
+.txt{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24pt;
+	color: #666;
+}
+
+.txt2{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24pt;
+	color: #1D253C;
+}
+
+.txt-menu{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48pt;
+	color: #1D253C;
+}
+
+.cost{
+	font-size: 32px;
+    font-weight: 300;
+    line-height: 40pt;
+	color: #1D253C;
 }

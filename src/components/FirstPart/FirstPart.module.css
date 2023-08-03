@@ -1,0 +1,47 @@
+.FirstPart{
+    background-color: #F8FAFF;
+    padding: 66px 0 0 103px;
+    font-family: 'Intro';
+    position: relative;
+    z-index: -100;
+    height: fit-content;
+}
+
+.info{
+    margin-bottom: 80px;
+    width: 375px;
+}
+
+.info h1{
+    margin-bottom: 34px;
+}
+
+.info p{
+    margin-bottom: 30px;
+}
+
+.info h5 a{
+    color: #2B6BF3  ;
+}
+
+.info h5 a::after{
+    content: url(../../resources/arrow.svg);
+    position: relative;
+    left: 8px;
+}
+
+.vidoe-h3{
+    margin-bottom: 22px;
+}
+
+.vidoe-h3+img{
+    margin-bottom: 72px;
+}
+
+.FirstPart>img{
+    position: absolute;
+    /* top: 72px; */
+    left: 413px;
+    bottom: 0;
+    z-index: -10;
+}
