@@ -3,7 +3,7 @@
     padding: 66px 0 0 103px;
     font-family: 'Intro';
     position: relative;
-    z-index: -100;
+    z-index: 1;
     height: fit-content;
 }
 
@@ -18,6 +18,7 @@
 
 .info p{
     margin-bottom: 30px;
+    max-width: 360px;
 }
 
 .info h5 a{
@@ -36,12 +37,38 @@
 
 .vidoe-h3+img{
     margin-bottom: 72px;
+    border-radius: 8px;
+    margin-bottom: 72px
+    ;
 }
 
 .FirstPart>img{
     position: absolute;
-    /* top: 72px; */
+    /* top: 72px;  Проблема с размером блока, поэтому убрал отступ. 
+    Проблема возникает из-за того, что у .txt высота линии 24pt аодходит 22 и 20. */
     left: 413px;
     bottom: 0;
     z-index: -10;
+}
+
+.GetStarted{
+    position: absolute;
+    top: 36px;
+    right: 32px;
+    padding: 39px 32px 24px 32px;
+    background-color: #FFF;
+    border: 2px solid #B7C6E7;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px #2B6BF314;
+    z-index: 2;
+}
+
+.GetStarted-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.i{
+    margin-left: 16px;
 }

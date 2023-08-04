@@ -3,6 +3,10 @@ import styles from './FirstPart.module.css'
 import video1 from '../../resources/Video default.jpg'
 import video2 from '../../resources/Video hover.jpg'
 import graphic from '../../resources/Graphic.svg'
+import iSvg from '../../resources/i.svg' 
+import DeliveryForm from '../DeliveryForm'
+import DeliverySwitch from '../UI/DeliverySwitch/DeliverySwitch'
+import DeliveryInput from '../UI/DeliveryInput/DeliveryInput'
 
 export default function FirstPart({children, ...props}) {
   const [imageSrc, setImageSrc] = useState(video1);
@@ -23,15 +27,25 @@ export default function FirstPart({children, ...props}) {
          />
       </div>
       <img src={graphic} alt="a" />
-      {/* <div>
-        <div>
-
+      <div>
+        <div className={styles.GetStarted}>
+          <div className={styles['GetStarted-info']}>
+            <h3>Send a Parcel</h3>
+            <span className={styles.i}>
+              <img src={iSvg} alt="" />
+            </span>
+          </div>
+          <DeliveryForm>
+            <DeliverySwitch/>
+            <DeliveryInput label="Pickup location" id="Pickup location" placeholder="location"/>
+            <DeliveryInput label="Drop location" id="Drop location" placeholder="" value="502 86th St, Brooklyn, NY 11209"/>
+          </DeliveryForm>
         </div>
-        <div>
+        {/* <div>
           <h3></h3>
           <input type="text" />
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </div>
   )
 }
