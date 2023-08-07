@@ -1,16 +1,25 @@
 import React, { useState } from 'react'
 import styles from './FirstPart.module.css'
+import DeliveryForm from '../DeliveryForm'
+import DeliverySwitch from '../UI/DeliverySwitch/DeliverySwitch'
+import DeliveryInput from '../UI/DeliveryInput/DeliveryInput'
+import Button from '../UI/Button/Button'
 import video1 from '../../resources/Video default.jpg'
 import video2 from '../../resources/Video hover.jpg'
 import graphic from '../../resources/Graphic.svg'
 import iSvg from '../../resources/i.svg' 
-import DeliveryForm from '../DeliveryForm'
-import DeliverySwitch from '../UI/DeliverySwitch/DeliverySwitch'
-import DeliveryInput from '../UI/DeliveryInput/DeliveryInput'
+import pinToPin from '../../resources/pinToPin.svg'
+import InputSearch from '../UI/InputSearch/InputSearch'
 
 export default function FirstPart({children, ...props}) {
   const [imageSrc, setImageSrc] = useState(video1);
+  const [fromTo, setFromTo] = useState({from: '', to: '502 86th St, Brooklyn, NY 11209'})
   
+  function clearAll(event){
+    event.preventDefault()
+    setFromTo({from: '', to: ''})
+  }
+
   return (
     <div className={styles.FirstPart}>
       <div className={styles.info}>
@@ -24,6 +33,7 @@ export default function FirstPart({children, ...props}) {
           src={imageSrc} 
           onMouseOver={ () => {setImageSrc(video2)} }
           onMouseOut={ () => {setImageSrc(video1)} }
+          alt=''
          />
       </div>
       <img src={graphic} alt="a" />
@@ -37,14 +47,40 @@ export default function FirstPart({children, ...props}) {
           </div>
           <DeliveryForm>
             <DeliverySwitch/>
-            <DeliveryInput label="Pickup location" id="Pickup location" placeholder="location"/>
-            <DeliveryInput label="Drop location" id="Drop location" placeholder="" value="502 86th St, Brooklyn, NY 11209"/>
+            <div className={styles.InputBox}>
+              <img src={pinToPin} alt="" />
+              <div>
+                <DeliveryInput 
+                  label="Pickup location" 
+                  id="Pickup location" 
+                  placeholder="location"
+                  value={fromTo.from}
+                  onChange={e => setFromTo({...fromTo, from: e.target.value})}
+                />
+                <DeliveryInput 
+                  label="Drop location" 
+                  id="Drop location" 
+                  placeholder="location" 
+                  value={fromTo.to}
+                  onChange={e => setFromTo({...fromTo, to: e.target.value})}
+                />
+              </div>
+            </div>
+            <Button bg='blue-bg' color='white-col'>Order</Button>
+            <button 
+              className={styles.Clear}
+              onClick={clearAll}
+            >Clear All</button>
           </DeliveryForm>
         </div>
         {/* <div>
           <h3></h3>
           <input type="text" />
         </div> */}
+      </div>
+      <div className={styles.SearchPackegePanel}>
+        <h3><span>Track a package</span></h3>
+        <InputSearch placeholder='Enter code'/>
       </div>
     </div>
   )

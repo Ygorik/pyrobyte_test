@@ -55,7 +55,7 @@
     position: absolute;
     top: 36px;
     right: 32px;
-    padding: 39px 32px 24px 32px;
+    padding: 37px 30px 22px 30px;
     background-color: #FFF;
     border: 2px solid #B7C6E7;
     border-radius: 8px;
@@ -69,6 +69,57 @@
     margin-bottom: 20px;
 }
 
+.GetStarted-info h3{
+    max-height: 32px;
+    vertical-align: top;
+}
+
 .i{
     margin-left: 16px;
+}
+
+.InputBox{
+    display: flex;
+    width: 100%;
+    align-items:start;
+    margin-bottom: 3px;
+}
+
+.InputBox img{
+    margin: 23px 16px 0 0;
+}
+
+.Clear{
+    margin-top: 16px;
+    color: #999;
+    height: 24px;
+    width: fit-content;
+    margin: 16px auto 0 auto;
+}
+
+.Clear::before{
+    content: url('../../resources/cross.svg');
+    margin-right: 8px;
+}
+
+.SearchPackegePanel{
+    width: 360px;
+    background-color: #FFDD2D;
+    padding: 31px 40px 32px 40px;
+    border-radius: 8px;
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.SearchPackegePanel h3{
+    height: 32px;
+    line-height: 1;
+    vertical-align: top;
+    margin-bottom: 9px;
+}
+
+.SearchPackegePanel h3 span{
+    display: inline-block;
+    vertical-align: top;
 }
